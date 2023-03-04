@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2982D23429B34FC80054DC01 /* http_server.c in Sources */ = {isa = PBXBuildFile; fileRef = 2982D23329B34FC80054DC01 /* http_server.c */; };
+		2982D23729B352BF0054DC01 /* logs.c in Sources */ = {isa = PBXBuildFile; fileRef = 2982D23629B352BF0054DC01 /* logs.c */; };
+		2982D23A29B355580054DC01 /* request.c in Sources */ = {isa = PBXBuildFile; fileRef = 2982D23929B355580054DC01 /* request.c */; };
 		29D5749729B2B3C9006723ED /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 29D5749629B2B3C9006723ED /* main.c */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +26,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2982D23229B34FC80054DC01 /* http_server.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = http_server.h; sourceTree = "<group>"; };
+		2982D23329B34FC80054DC01 /* http_server.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = http_server.c; sourceTree = "<group>"; };
+		2982D23529B352BF0054DC01 /* logs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = logs.h; sourceTree = "<group>"; };
+		2982D23629B352BF0054DC01 /* logs.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = logs.c; sourceTree = "<group>"; };
+		2982D23829B355580054DC01 /* request.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = request.h; sourceTree = "<group>"; };
+		2982D23929B355580054DC01 /* request.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = request.c; sourceTree = "<group>"; };
 		29D5749329B2B3C9006723ED /* cweb */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = cweb; sourceTree = BUILT_PRODUCTS_DIR; };
 		29D5749629B2B3C9006723ED /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -38,6 +47,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2982D22E29B344E80054DC01 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				2982D23229B34FC80054DC01 /* http_server.h */,
+				2982D23329B34FC80054DC01 /* http_server.c */,
+				2982D23529B352BF0054DC01 /* logs.h */,
+				2982D23629B352BF0054DC01 /* logs.c */,
+				2982D23829B355580054DC01 /* request.h */,
+				2982D23929B355580054DC01 /* request.c */,
+			);
+			path = libs;
+			sourceTree = "<group>";
+		};
 		29D5748A29B2B3C9006723ED = {
 			isa = PBXGroup;
 			children = (
@@ -57,6 +79,7 @@
 		29D5749529B2B3C9006723ED /* cweb */ = {
 			isa = PBXGroup;
 			children = (
+				2982D22E29B344E80054DC01 /* libs */,
 				29D5749629B2B3C9006723ED /* main.c */,
 			);
 			path = cweb;
@@ -119,7 +142,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2982D23429B34FC80054DC01 /* http_server.c in Sources */,
+				2982D23729B352BF0054DC01 /* logs.c in Sources */,
 				29D5749729B2B3C9006723ED /* main.c in Sources */,
+				2982D23A29B355580054DC01 /* request.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
