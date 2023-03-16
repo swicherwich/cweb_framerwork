@@ -34,7 +34,6 @@ void init_http_server(HTTP_Server* server, u_int port)
 
     server->port = port;
     server->socket = srv_socket;
-    server->start_server = start_server;
     server->http_router = init();
 
     if (bind(srv_socket, (struct sockaddr *) &server_address, sizeof(server_address)) < 0)
@@ -50,12 +49,6 @@ void bind_route(HTTP_Server* server, char* method, char* route, Controller contr
 {
     server->http_router->add_handler(server->http_router, method, route, controller);
     info("Route %s for %s configured.", route, method);
-}
-
-void bind_404_route(HTTP_Server* server, char* method, Controller controller)
-{
-    server->http_router->add_handler(server->http_router, method, NULL, controller);
-    info("Route 404 for %s configured.", route, method);
 }
 
 void start_server(HTTP_Server* server, u_int backlog)

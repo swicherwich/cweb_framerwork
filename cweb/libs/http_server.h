@@ -15,16 +15,14 @@
 typedef struct _HTTP_Server HTTP_Server;
 
 typedef unsigned int u_int;
-typedef void (*Start_Server)(struct _HTTP_Server* self, u_int backlog);
 
 struct _HTTP_Server {
     u_int socket;
-    u_int port;
-    Start_Server start_server;
-    HTTP_Router* http_router;
+    u_int port;    HTTP_Router* http_router;
 };
 
 void init_http_server(HTTP_Server* server, u_int port);
 void bind_route(HTTP_Server* server, char* method, char* route, Controller controller);
+void start_server(HTTP_Server* server, u_int backlog);
 
 #endif /* http_server_h */

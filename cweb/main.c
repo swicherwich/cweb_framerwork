@@ -39,7 +39,7 @@ int main(int argc, const char* argv[]) {
     bind_route(server, "GET", "/hello", say_hello);
     bind_route(server, "GET", "/bye", say_hello);
     
-    server->start_server(server, 5);
+    start_server(server, 5);
     
     return 0;
 }
